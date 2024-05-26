@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		65FE21142C027FF40092FD67 /* NavigationRouterExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE21132C027FF40092FD67 /* NavigationRouterExampleApp.swift */; };
-		65FE21162C027FF40092FD67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE21152C027FF40092FD67 /* ContentView.swift */; };
 		65FE21182C027FF60092FD67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FE21172C027FF60092FD67 /* Assets.xcassets */; };
 		65FE211B2C027FF60092FD67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FE211A2C027FF60092FD67 /* Preview Assets.xcassets */; };
+		65FE21222C02802B0092FD67 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE21212C02802B0092FD67 /* Router.swift */; };
+		65FE21242C0280870092FD67 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE21232C0280870092FD67 /* MainTabView.swift */; };
+		65FE21262C0280C40092FD67 /* RootViewA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE21252C0280C40092FD67 /* RootViewA.swift */; };
+		65FE21282C0280E40092FD67 /* RootViewB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE21272C0280E40092FD67 /* RootViewB.swift */; };
+		65FE212A2C0280EE0092FD67 /* RootViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE21292C0280EE0092FD67 /* RootViewC.swift */; };
+		65FE212D2C0284BA0092FD67 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 65FE212C2C0284BA0092FD67 /* SwiftUINavigation */; };
+		65FE212F2C0284BA0092FD67 /* SwiftUINavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = 65FE212E2C0284BA0092FD67 /* SwiftUINavigationCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		65FE21102C027FF40092FD67 /* NavigationRouterExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationRouterExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FE21132C027FF40092FD67 /* NavigationRouterExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouterExampleApp.swift; sourceTree = "<group>"; };
-		65FE21152C027FF40092FD67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		65FE21172C027FF60092FD67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65FE211A2C027FF60092FD67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		65FE21212C02802B0092FD67 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		65FE21232C0280870092FD67 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		65FE21252C0280C40092FD67 /* RootViewA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewA.swift; sourceTree = "<group>"; };
+		65FE21272C0280E40092FD67 /* RootViewB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewB.swift; sourceTree = "<group>"; };
+		65FE21292C0280EE0092FD67 /* RootViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65FE212D2C0284BA0092FD67 /* SwiftUINavigation in Frameworks */,
+				65FE212F2C0284BA0092FD67 /* SwiftUINavigationCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +64,11 @@
 			isa = PBXGroup;
 			children = (
 				65FE21132C027FF40092FD67 /* NavigationRouterExampleApp.swift */,
-				65FE21152C027FF40092FD67 /* ContentView.swift */,
+				65FE21212C02802B0092FD67 /* Router.swift */,
+				65FE21232C0280870092FD67 /* MainTabView.swift */,
+				65FE21252C0280C40092FD67 /* RootViewA.swift */,
+				65FE21272C0280E40092FD67 /* RootViewB.swift */,
+				65FE21292C0280EE0092FD67 /* RootViewC.swift */,
 				65FE21172C027FF60092FD67 /* Assets.xcassets */,
 				65FE21192C027FF60092FD67 /* Preview Content */,
 			);
@@ -83,6 +99,10 @@
 			dependencies = (
 			);
 			name = NavigationRouterExample;
+			packageProductDependencies = (
+				65FE212C2C0284BA0092FD67 /* SwiftUINavigation */,
+				65FE212E2C0284BA0092FD67 /* SwiftUINavigationCore */,
+			);
 			productName = NavigationRouterExample;
 			productReference = 65FE21102C027FF40092FD67 /* NavigationRouterExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 65FE21072C027FF40092FD67;
+			packageReferences = (
+				65FE212B2C0284BA0092FD67 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
+			);
 			productRefGroup = 65FE21112C027FF40092FD67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +160,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65FE21162C027FF40092FD67 /* ContentView.swift in Sources */,
+				65FE21262C0280C40092FD67 /* RootViewA.swift in Sources */,
+				65FE21222C02802B0092FD67 /* Router.swift in Sources */,
+				65FE21282C0280E40092FD67 /* RootViewB.swift in Sources */,
 				65FE21142C027FF40092FD67 /* NavigationRouterExampleApp.swift in Sources */,
+				65FE212A2C0280EE0092FD67 /* RootViewC.swift in Sources */,
+				65FE21242C0280870092FD67 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +371,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		65FE212B2C0284BA0092FD67 /* XCRemoteSwiftPackageReference "swiftui-navigation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swiftui-navigation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		65FE212C2C0284BA0092FD67 /* SwiftUINavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65FE212B2C0284BA0092FD67 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			productName = SwiftUINavigation;
+		};
+		65FE212E2C0284BA0092FD67 /* SwiftUINavigationCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65FE212B2C0284BA0092FD67 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			productName = SwiftUINavigationCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 65FE21082C027FF40092FD67 /* Project object */;
 }

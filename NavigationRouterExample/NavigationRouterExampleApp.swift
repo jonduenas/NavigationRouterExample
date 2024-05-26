@@ -11,7 +11,7 @@ import SwiftUI
 struct NavigationRouterExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView(appModel: AppModel())
         }
     }
 }
