@@ -18,7 +18,9 @@ final class AppModel {
     init() {
         self.appRouter = AppRouter(routerA: RouterA(), routerB: RouterB())
         self.modelA = ModelA()
+        modelA.router = appRouter.routerA
         self.modelB = ModelB()
+        modelB.router = appRouter.routerB
         self.modelC = ModelC()
     }
 }

@@ -10,23 +10,15 @@ import SwiftUINavigation
 
 @MainActor
 @Observable
-final class RouterB: Router {
+final class RouterB: RouterRoutableC {
     var path: [Destination]
 
     init(path: [Destination] = []) {
         self.path = path
     }
 
-    func navigate(to route: Route) {
-        // This doesn't work because switch must be exhaustive
-        // But making it exhaustive means supporting routing to
-        // A, which should be impossible. B should have no knowledge
-        // of A.
+    func navigate(to route: RouteC) {
         switch route {
-        case .viewB:
-            let model = ModelB()
-            model.router = self
-            path.append(.viewB(model))
         case .viewC:
             let model = ModelC()
             model.router = self
@@ -38,9 +30,7 @@ final class RouterB: Router {
 @MainActor
 @Observable
 final class ModelB: HashableObject {
-    // This needs to be any Router so it can be set to the router that presents it
-    // Using generics causes cascade of having to specify Router type everywhere
-    weak var router: (any Router)?
+    weak var router: (any RouterRoutableC)?
     let number: Int
 
     init(number: Int = 0) {

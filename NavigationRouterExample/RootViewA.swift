@@ -15,14 +15,16 @@ import SwiftUINavigation
 
 @MainActor
 @Observable
-final class RouterA: Router {
+final class RouterA: RouterRoutableABC, RouterRoutableC {
+    typealias R = RouteA
+    
     var path: [Destination]
 
     init(path: [Destination] = []) {
         self.path = path
     }
 
-    func navigate(to route: Route) {
+    func navigate(to route: RouteA) {
         switch route {
         case .viewA(let string):
             let model = ModelA(title: string)
@@ -33,8 +35,19 @@ final class RouterA: Router {
             model.router = self
             path.append(.viewB(model))
         case .viewC:
-            path.append(.viewC(ModelC()))
+            navigateToC()
         }
+    }
+
+    func navigate(to route: RouteC) {
+        switch route {
+        case .viewC:
+            navigateToC()
+        }
+    }
+
+    private func navigateToC() {
+        path.append(.viewC(ModelC()))
     }
 }
 
@@ -51,6 +64,10 @@ final class ModelA: HashableObject {
     func navigateToBTapped() {
         router?.navigate(to: .viewB(123))
     }
+
+    func navigateToCTapped() {
+        router?.navigate(to: RouteA.viewC)
+    }
 }
 
 struct RootViewA: View {
@@ -61,6 +78,10 @@ struct RootViewA: View {
             Text(model.title)
             Button("Navigate To B") {
                 model.navigateToBTapped()
+            }
+
+            Button("Navigate To C") {
+                model.navigateToCTapped()
             }
         }
         .navigationDestination(for: Destination.self) { destination in
